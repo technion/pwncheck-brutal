@@ -6,7 +6,7 @@
   "types": "lib/pwncheck.d.ts",
   "scripts": {
     "build": "tsc",
-    "prepublishOnly": "npm lint",
+    "prepublishOnly": "npm run lint",
     "lint": "tslint src/*.tsx",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

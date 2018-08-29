@@ -20,18 +20,25 @@ async function fetchAsync(code: string) {
   return await response.text();
 }
 
-// Utilises k-anonimity algorith with Pwned Passwords API
+// Utilises k-anonymity algorith with Pwned Passwords API
 // Get SHA-1 of password
 // Supply that to API
 // Search results for full matching hash
 // Returns true if password is in breaches.
-export async function pwnlookup(password: string) {
+async function pwnlookupasync(password: string): Promise<boolean> {
   let hash = await sha1(password);
   hash = hash.toUpperCase();
+  const match = hash.slice(5);
   const foundpasses = await fetchAsync(hash.slice(0, 5));
 
-  foundpasses
+  return foundpasses
     .split("\n")
     .map((p) => p.split(":")[0])
-    .includes(hash);
+    .includes(match);
+}
+
+// Directly exporting an async function does not appear to work
+// Just wraps as a traditional function
+export function beenpwned(password: string): Promise<boolean> {
+  return pwnlookupasync(password);
 }
