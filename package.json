@@ -1,6 +1,6 @@
 {
   "name": "pwncheck-brutal",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
   "main": "lib/pwncheck.js",
   "types": "lib/pwncheck.d.ts",
@@ -10,7 +10,10 @@
     "lint": "tslint src/*.tsx",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [ "Pwned", "HaveIBeenPwned"],
+  "keywords": [
+    "Pwned",
+    "HaveIBeenPwned"
+  ],
   "author": "technion@lolware.net",
   "license": "ISC",
   "dependencies": {},
