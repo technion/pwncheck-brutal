@@ -1,10 +1,12 @@
 {
   "name": "pwncheck-brutal",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "./lib/pwncheck.js",
+  "types": "./lib/pwncheck.d.ts",
   "scripts": {
     "build": "tsc",
+    "prepublishOnly": "tsc",
     "lint": "tslint src/*.tsx",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
