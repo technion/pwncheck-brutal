@@ -1,0 +1,20 @@
+{
+  "name": "pwncheck-brutal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "tslint src/*.tsx",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "technion@lolware.net",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "prettier": "^1.14.2",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.1"
+  }
+}
