@@ -17,6 +17,21 @@ Non-goals
 - Bundling 30KB of polyfills. I suggest looking at one of the existing libraries for this goal.
 - Running as a command line interface. This was specifically built for web based use.
 
+Usage
+-----
+
+Install the module:
+
+    npm install --save pwncheck-brutal
+
+Use it:
+```
+import { beenpwned } from "pwncheck-brutal";
+beenpwned(confirmpassword)
+  .then(pwned) => {
+    console.log(`Has password been pwned? ${pwned}`);
+  }
+```
 
 Tests
 -----
